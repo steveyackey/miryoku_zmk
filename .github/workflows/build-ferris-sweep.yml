@@ -1,0 +1,22 @@
+# Copyright 2022 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: 'Build Ferris Sweep'
+on: 
+  - workflow_dispatch
+  - push
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      alphas: '["QWERTY"]'
+      board: '["nice_nano_v2"]'
+      branches: '["default"]'
+      clipboard: '["default"]'
+      custom_config: '["default"]'
+      kconfig: '["default"]'
+      layers: '["default"]'
+      mapping: '["default"]'
+      nav: '["vi"]'
+      shield: '["cradio_left"," cradio_right"]'
